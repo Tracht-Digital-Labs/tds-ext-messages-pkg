@@ -65,7 +65,7 @@ return [
             ['status' => 201, 'description' => '`{id}` der angelegten Nachricht.'],
             ['status' => 401, 'description' => 'Keine Sitzung.'],
             ['status' => 403, 'description' => 'Kein `messages:write`.'],
-            ['status' => 422, 'description' => 'Text leer oder länger als 10.000 Zeichen, oder keine aktive Firma (Nicht-Admin).'],
+            ['status' => 422, 'description' => 'Text leer oder länger als 10.000 Zeichen oder keine aktive Firma (Nicht-Admin).'],
         ],
     ],
     [
