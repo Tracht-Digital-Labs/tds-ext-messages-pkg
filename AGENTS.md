@@ -27,6 +27,7 @@ composer install && composer test   # phpunit
 - Migration class name and version prefix stay unique across all extensions.
 - No CSS; shared `tds-shared` classes only.
 - Versions move via the release workflow only; never bump by hand.
+- Follows the TDS quality standard (`../tds-ops/standards/quality.md`): no AI slop, clean code.
 
 ## Topic files
 

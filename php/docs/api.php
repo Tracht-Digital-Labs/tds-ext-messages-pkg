@@ -31,7 +31,7 @@ return [
         'pattern' => '/messages',
         'summary' => 'Nachrichtenverlauf lesen',
         'description' => '**Hat einen Seiteneffekt:** der Abruf markiert die Nachrichten der '
-            . 'Gegenseite als gelesen — deshalb sinkt der Zähler aus `/messages/summary` '
+            . 'Gegenseite als gelesen, deshalb sinkt der Zähler aus `/messages/summary` '
             . 'unmittelbar danach. Die Sichtbarkeit richtet sich nach der aktiven Firma '
             . '(`X-Act-As-Customer`); ein Admin ohne aktive Firma sieht alle Verläufe.',
         'permission' => 'messages:read',
@@ -65,7 +65,7 @@ return [
             ['status' => 201, 'description' => '`{id}` der angelegten Nachricht.'],
             ['status' => 401, 'description' => 'Keine Sitzung.'],
             ['status' => 403, 'description' => 'Kein `messages:write`.'],
-            ['status' => 422, 'description' => 'Text leer oder länger als 10.000 Zeichen — oder keine aktive Firma (Nicht-Admin).'],
+            ['status' => 422, 'description' => 'Text leer oder länger als 10.000 Zeichen, oder keine aktive Firma (Nicht-Admin).'],
         ],
     ],
     [
@@ -73,7 +73,7 @@ return [
         'pattern' => '/messages/{id:[0-9]+}',
         'summary' => 'Nachricht nachträglich ändern',
         'description' => 'Ein Admin darf jede Nachricht ändern, ein Kunde nur die seiner '
-            . 'aktiven Firma. Eine nicht sichtbare Id ergibt 404 — es wird nicht '
+            . 'aktiven Firma. Eine nicht sichtbare Id ergibt 404, es wird nicht '
             . 'zwischen „gibt es nicht" und „gehört jemand anderem" unterschieden.',
         'permission' => 'messages:write',
         'params' => [
