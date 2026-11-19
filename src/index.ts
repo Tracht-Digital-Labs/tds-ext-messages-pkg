@@ -1,4 +1,4 @@
-import { defineExtension } from "@tracht-digital-solutions/tds-frontend-contract";
+import { defineExtension } from "@tracht-digital-labs/tds-frontend-contract";
 
 /**
  * Messages extension — the customer↔owner conversation thread, ported from
@@ -32,7 +32,7 @@ export default defineExtension({
     {
       id: "messages-unread",
       title: "Neue Nachrichten",
-      island: "@tracht-digital-solutions/tds-ext-messages/widgets/Widget.astro",
+      island: "@tracht-digital-labs/tds-ext-messages/widgets/Widget.astro",
       size: "sm",
       permission: "messages:read",
       dataEndpoint: "/messages/summary",
@@ -42,7 +42,7 @@ export default defineExtension({
   routes: [
     {
       pattern: "/messages",
-      entrypoint: "@tracht-digital-solutions/tds-ext-messages/pages/Index.astro",
+      entrypoint: "@tracht-digital-labs/tds-ext-messages/pages/Index.astro",
       permission: "messages:read",
     },
   ],
